@@ -188,22 +188,6 @@ CREATE TABLE `events` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-	`id` bigint(20) UNSIGNED NOT NULL,
-	`uuid` varchar(255) NOT NULL,
-	`connection` text NOT NULL,
-	`queue` text NOT NULL,
-	`payload` longtext NOT NULL,
-	`exception` longtext NOT NULL,
-	`failed_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `migrations`
 --
 
@@ -211,18 +195,6 @@ CREATE TABLE `migrations` (
 	`id` int(10) UNSIGNED NOT NULL,
 	`migration` varchar(255) NOT NULL,
 	`batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_reset_tokens`
---
-
-CREATE TABLE `password_reset_tokens` (
-	`email` varchar(255) NOT NULL,
-	`token` varchar(255) NOT NULL,
-	`created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------

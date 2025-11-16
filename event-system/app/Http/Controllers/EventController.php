@@ -82,16 +82,7 @@ class EventController extends Controller
 
     public function calendarEvents(Request $request)
     {
-        $user = $request->user();
-
-        // Admin → return ALL events
-        if ($user->role === 'admin') {
-            return Event::all();
-        }
-
-        // User → return only events they RSVP'd
-        return Event::whereHas('rsvps', function ($q) use ($user) {
-            $q->where('user_id', $user->id);
-        })->get();
+        // Return ALL events for everyone
+        return Event::all();
     }
 }

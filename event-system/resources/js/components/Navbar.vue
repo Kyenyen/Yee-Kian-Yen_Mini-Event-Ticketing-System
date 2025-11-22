@@ -45,8 +45,6 @@
           </router-link>
         </div>
 
-        
-
         <!-- Right: Profile / Auth actions -->
         <div class="flex items-center space-x-4">
           <template v-if="user">
